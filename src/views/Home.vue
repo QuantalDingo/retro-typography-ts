@@ -1,18 +1,37 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <br />
+    <br />
+    <v-button class="btn-success">success</v-button>
+    <br />
+    <br />
+    <v-button v-danger>danger</v-button>
+    <br />
+    <br />
+    <v-button class="btn-warning">warning</v-button>
+    <br />
+    <br />
+    <v-button class="btn-info">info</v-button>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+
+import RetroButton from "@/components/RetroButton.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
-    HelloWorld
+    "v-button": RetroButton
+  },
+  setup() {
+    return {};
   }
 });
 </script>
+
+<style lang="scss">
+.home {
+}
+</style>
